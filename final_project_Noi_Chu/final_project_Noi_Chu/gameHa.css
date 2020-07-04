@@ -1,0 +1,100 @@
+body {
+    background-color: #4bcffa;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    /* text-align: center; */
+}
+
+html, body, #root {
+    height: 100%;
+}
+
+/*  */
+
+#inputEle {
+    margin-left: 8px;
+    font-size: 30px;
+    width: 280px;
+    height: 30px;
+}
+
+.contain {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#currentWordEle {
+    font-size: 30px;
+    font-style: oblique;
+}
+
+.loader {
+    display: none;
+    margin-left: 8px;
+    border-radius: 50%;
+    border-top: 5px solid blue;
+    border-right: 5px solid green;
+    border-bottom: 5px solid red;
+    border-left: 5px solid pink;
+    width: 20px;
+    height: 20px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    animation-play-state: paused;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#countdown {
+    position: relative;
+    margin-left: 8px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    display: none;
+}
+
+#countdown-number {
+    color: black;
+    display: inline-block;
+    line-height: 40px;
+}
+
+svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    transform: rotateY(-180deg) rotateZ(-90deg);
+}
+
+svg circle {
+    stroke-dasharray: 113px;
+    stroke-dashoffset: 0px;
+    stroke-linecap: round;
+    stroke-width: 2px;
+    stroke: black;
+    fill: none;
+    animation: countdown 10s linear infinite forwards;
+    animation-play-state: paused;
+}
+
+@keyframes countdown {
+    from {
+        stroke-dashoffset: 0px;
+    }
+    to {
+        stroke-dashoffset: 113px;
+    }
+}

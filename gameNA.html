@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Nối chữ</title>
+		<style></style>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Lobster&family=Pacifico&family=VT323&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="gameNA.css" />
+		<link rel="stylesheet" href="gameHa.css">
+	</head>
+	<body style="background-color: #4bcffa;">
+		<div class="to">
+			<div id="txtNoiChu">
+				<span
+					class="text-in"
+					style="animation-delay: 0ms; -webkit-animation-delay: 0ms;"
+					>N</span
+				>
+				<span
+					class="text-in"
+					style="animation-delay: 32ms; -webkit-animation-delay: 32ms;"
+					>ố</span
+				>
+				<span
+					class="text-in"
+					style="animation-delay: 64ms; -webkit-animation-delay: 64ms;"
+					>i</span
+				>
+				<span
+					class="text-in"
+					style="animation-delay: 160ms; -webkit-animation-delay: 160ms;"
+				>
+				</span>
+				<span
+					class="text-in"
+					style="animation-delay: 192ms; -webkit-animation-delay: 192ms;"
+					>C</span
+				>
+				<span
+					class="text-in"
+					style="animation-delay: 224ms; -webkit-animation-delay: 224ms;"
+					>h</span
+				>
+				<span
+					class="text-in"
+					style="animation-delay: 256ms; -webkit-animation-delay: 256ms;"
+					>ữ</span
+				>
+			</div>
+			<!-- het div txtNoiChu  -->
+
+			<div class="txtTieuDe">
+				<div id="timKiem" class="txtTD">
+					Tìm kiếm
+				</div>
+				<!-- het div timKiem  -->
+				<div class="nganCach"></div>
+				<!-- het div ngan cach  -->
+				<div id="choiVoiMay" class="txtTD">
+					Chơi với máy
+				</div>
+				<!-- het div choiVoiMay  -->
+			</div>
+			<!-- het div txtTieuDe  -->
+			<div id="tabTimKiem">
+                <div class="tabTrong">
+                    <input id="focusedInput" type="text" placeholder="Nhập từ có nghĩa" style="text-align: center;" onchange="search()" />
+                </div>
+                <div id="chuyenDoi"><i class="fas fa-arrow-right"></i></div>
+                <div class="tabTrong" id="output" style="background-color: whitesmoke; flex-direction: column;align-items: center;">
+                    <!-- <input id="disabledInput" type="text" disabled /> -->
+                </div>
+			</div>
+			<!-- het div page  -->
+            <div id="tabChoiGame">
+								<div class="contain">
+										<i class="fas fa-user fa-fw fa-2x"  style="color: black"></i>
+										<div class="chuaInput">
+												<input id="inputEle" onchange="load()" width="20"  height="48">
+										</div>
+										<!-- het div chua Input  -->
+										<div id="countdown">
+												<div id="countdown-number"></div>
+												<svg>
+													<!-- <g color="black"> -->
+														<circle r="18" cx="20" cy="20" stroke="black" stroke-width="3"></circle>
+													<!-- </g> -->
+												</svg>
+										</div>
+										<!-- het div countdown  -->
+								</div>
+								<!-- het div contain  -->
+				
+								<div id="currentWordEle" style="color: black">Kết quả ở đây</div>
+				
+								<div class="contain">
+										<i class="fas fa-robot fa-fw fa-2x" style="color: black"></i>
+										<div class="loader"></div>
+								</div>
+								<!-- het div contain  -->
+            </div>
+            <!-- het tab choi game  -->
+			<!-- =============================================== -->
+		</div>
+		<!-- het div to  -->
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    </body>
+    <script src="https://kit.fontawesome.com/7c9edb6824.js" crossorigin="anonymous"></script>
+	<script src="gameHa.js"></script>
+    <script src="timKiem.js"></script>
+</html>
